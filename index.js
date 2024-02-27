@@ -11,6 +11,7 @@ const client = new Client({
 client.commands = new Collection();
 
 
+const http = require("http");
 const server = http.createServer(function(req,res){
     fs.readFile('./index.html', 'utf-8', function(err, data){
         res.writeHead(200, {'Content-Type': 'text/html'});
