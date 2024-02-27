@@ -11,6 +11,16 @@ const client = new Client({
 client.commands = new Collection();
 
 
+const server = http.createServer(function(req,res){
+    fs.readFile('./index.html', 'utf-8', function(err, data){
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.write(data);
+        res.end();
+    });
+});
+server.listen(3000);
+
+
 
 // commandsフォルダから、.jsで終わるファイルのみを取得
 const commandsPath = path.join(__dirname, "commands");
