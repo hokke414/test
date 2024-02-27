@@ -45,7 +45,7 @@ client.on("messageCreate", (message) => {
   if (message.content == "manato") {
     message.channel.send("fuck");
   } else if (message.content == "a") {
-    message.channel.send("bcdefghijklmnopqrstuvwxyz");
+    message.channel.send("aaaaa");
   }
 });
 
