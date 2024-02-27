@@ -10,13 +10,7 @@ const client = new Client({
 });
 client.commands = new Collection();
 
-const http = require("http");
-http
-  .createServer(function (request, response) {
-    response.writeHead(200, { "Content-Type": "text/plain" });
-    response.end("Bot is online!");
-  })
-  .listen(3000);
+
 
 // commandsフォルダから、.jsで終わるファイルのみを取得
 const commandsPath = path.join(__dirname, "commands");
